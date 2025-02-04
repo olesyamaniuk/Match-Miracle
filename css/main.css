@@ -1,0 +1,1158 @@
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+:root {
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  height: auto;
+}
+
+.list {
+  list-style: none;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.button:hover {
+  scale: 120%;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.header.is-open .header__background {
+  left: 0;
+}
+.header__button-wrapper {
+  margin-left: auto;
+}
+.header__icon {
+  display: none;
+}
+
+.header__icon-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+}
+
+.header__icon--menu {
+  display: block;
+}
+
+.header__icon-button.is-open .header__icon--menu {
+  display: none;
+}
+
+.header__icon-button.is-open .header__icon--close {
+  display: block;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  background: transparent;
+  display: flex;
+  height: 64px;
+  background: rgba(0, 174, 238, 1);
+}
+.header__background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 100%;
+
+  z-index: -1;
+  -webkit-transition: left 0.3s ease;
+  transition: left 0.3s ease;
+  background: rgba(0, 174, 238, 1);
+}
+.header.is-open .header__background {
+  left: 0;
+}
+.header__button-wrapper {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.policy-terms-header__button-wrapper {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__icon {
+  display: none;
+}
+.header__icon-button {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+}
+
+.header__icon--menu {
+  display: block;
+}
+
+.header__icon-button.is-open .header__icon--menu {
+  display: none;
+}
+
+.header__icon-button.is-open .header__icon--close {
+  display: block;
+}
+
+.navigation {
+  display: -ms-flexbox;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 16px;
+  position: relative;
+}
+
+.navigation__list {
+  display: flex;
+  flex-direction: column;
+
+  align-items: start;
+
+  top: 130px;
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  width: 100%;
+  height: 557px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 999;
+
+  padding: 0px 32px;
+
+  border-radius: 0px 0px 20px 20px;
+  gap: 28px;
+  background: rgba(0, 174, 238, 1);
+}
+.navigation__list.is-open {
+  right: 0;
+}
+.navigation__link {
+  font-family: Mochiy Pop P One;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  padding: 0px 0 4px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+}
+.navigation__link:hover,
+.navigation__link:focus {
+  border-bottom: 4px solid rgba(247, 190, 55, 1);
+}
+.header.is-open {
+  background-color: transparent;
+}
+.navigation-img {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .navigation-img {
+    display: flex;
+  }
+  .policy-terms-header__icon--menu {
+    display: none;
+  }
+
+  .header {
+    width: 100%;
+
+    height: 90px;
+    padding: 10px 20px 10px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1000;
+  }
+  .header__background {
+  }
+
+  .header__icon-button {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+
+    flex-direction: row;
+
+    flex: 1;
+    padding: 0;
+
+    width: 1440px;
+    margin: auto;
+  }
+  .navigation__list {
+    background-color: transparent;
+    flex-direction: row;
+    display: flex;
+    position: static;
+    width: 1440px;
+    margin: auto;
+
+    padding-block: 0;
+    flex: 1;
+    gap: 70px;
+    height: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .navigation__link {
+    font-family: Mochiy Pop P One;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+
+  .navigation__item-desk {
+    display: none;
+  }
+}
+
+.home {
+  width: 375px;
+  height: 944px;
+
+  padding: 70px 16px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/image/home/Block\ 1.png");
+  margin: auto;
+}
+
+.home__container-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home-title {
+  width: 303px;
+  height: 138px;
+}
+
+.home-text {
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  padding: 16px 0 32px;
+}
+.home-text-two {
+  font-family: Ubuntu;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  padding-top: 301px;
+}
+@media screen and (min-width: 1200px) {
+  .home {
+    width: 1440px;
+    height: 800px;
+
+    padding: 102px 80px 0px;
+    background-image: url("/image/home/Hero.png");
+  }
+  .home__container-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+  }
+  .home-title {
+    width: 500px;
+    height: 228px;
+  }
+
+  .home-text {
+    font-family: Ubuntu;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    padding: 32px 0 40px;
+  }
+  .home-text-two {
+    font-family: Ubuntu;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    padding-top: 61px;
+    width: 997px;
+    margin: auto;
+  }
+}
+.about {
+  padding: 60px 20px 0px;
+  margin: auto;
+  width: 375px;
+  height: 1080px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/image/about/About\ the\ Game.png");
+}
+
+.about-title {
+  font-family: Mochiy Pop P One;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 40px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.about-text {
+  font-family: Ubuntu;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 0px 0;
+}
+.about-text-bold {
+  font-family: Mochiy Pop P One;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(0, 245, 146, 1);
+  padding-top: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .about {
+    padding: 88px 124px 0px 300px;
+    margin: auto;
+    width: 1440px;
+    height: 672px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("/image/about/About\ us.png");
+  }
+
+  .about-title {
+    font-family: Mochiy Pop P One;
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 52px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+
+  .about-text {
+    margin-left: 400px;
+    font-family: Ubuntu;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    justify-content: end;
+    align-items: end;
+    gap: 30px;
+    width: 629px;
+
+    padding: 60px 0px 0;
+  }
+  .about-text-bold {
+    font-family: Mochiy Pop P One;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    width: 1130px;
+    margin-left: -155px;
+
+    padding-top: 60px;
+  }
+}
+.how {
+  width: 375px;
+  height: 1326px;
+
+  margin: auto;
+  padding: 60px 20px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/image/how/How\ to\ Play.png");
+}
+
+.how-list {
+  padding-top: 40px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.how-item {
+  width: 335px;
+  padding: 16px 24px 16px 24px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 8px 12px 0px rgba(5, 123, 201, 1);
+  display: flex;
+  gap: 20px;
+  align-items: start;
+}
+
+.how-text-bold {
+  padding: 0px 0 5px;
+  color: rgba(32, 32, 33, 1);
+  font-family: Ubuntu;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.how-text {
+  color: rgba(32, 32, 33, 1);
+  font-family: Ubuntu;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.uniqueness-list {
+  margin-top: 24px;
+  background: rgba(255, 255, 255, 0.29);
+  border: 1px solid rgba(5, 19, 29, 0.24);
+  width: 335px;
+  padding: 36px 20px 36px 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  font-family: Mochiy Pop P One;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+@media screen and (min-width: 1200px) {
+  .how {
+    width: 1440px;
+    height: 730px;
+    margin: auto;
+    padding: 88px 106px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("/image/how/How\ to\ Play\ \(1\).png");
+  }
+
+  .how-list {
+    padding-top: 60px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+  }
+  .how-item {
+    width: 388px;
+    height: 137px;
+  }
+
+  .uniqueness-list {
+    width: 1228px;
+    padding: 36px 102px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    font-family: Mochiy Pop P One;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+}
+
+.faq {
+  padding: 60px 20px;
+  margin: auto;
+  width: 375px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/image/faq/FAQ.png");
+}
+.faq-container {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: auto;
+}
+
+.faq-item {
+  width: 335px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 1);
+  border: 2px solid rgba(134, 150, 255, 1);
+  padding: 20px 28px;
+}
+
+.faq-question {
+  font-family: Ubuntu;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  color: rgba(53, 56, 63, 1);
+}
+
+.faq-answer {
+  color: rgba(53, 56, 63, 1);
+  padding-top: 12px;
+  font-family: Ubuntu;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+@media screen and (min-width: 1200px) {
+  .faq {
+    padding: 88px 140px;
+    width: 1440px;
+    height: 1456px;
+    background-image: url("/image/faq/Gallery\ \(2\).png");
+  }
+  .faq-container {
+    padding-top: 60px;
+    gap: 32px;
+  }
+
+  .faq-item {
+    width: 1160px;
+  }
+
+  .faq-question {
+    font-family: Ubuntu;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+
+  .faq-answer {
+    font-family: Ubuntu;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+}
+.gallery {
+  width: 375px;
+  height: 1230px;
+
+  margin: auto;
+  padding: 60px 20px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/image/gallery/Gallery\ \(1\).png");
+}
+.why-text {
+  font-family: Mochiy Pop P One;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  padding: 20px 0;
+}
+.why-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.why-item {
+  font-family: Ubuntu;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  padding: 8px 32px 8px 32px;
+  background: rgba(112, 199, 58, 1);
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 114px;
+}
+.why-item-two {
+  background: rgba(244, 193, 27, 1);
+}
+.why-item-three {
+  background: rgba(255, 158, 51, 1);
+}
+.why-item-four {
+  background: rgba(174, 89, 242, 1);
+}
+.gallery__list {
+  width: auto;
+  padding-top: 24px;
+  padding-bottom: 32px;
+
+  margin: auto;
+}
+.gallery__item {
+  width: 322px;
+  height: 574px;
+
+  overflow: hidden;
+  position: relative;
+  margin: 0 10px;
+}
+
+.gallery__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.gallery-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.gallery-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  -webkit-transition: scale 0.3s ease;
+  transition: scale 0.3s ease;
+}
+
+.gallery-button:hover {
+  scale: 120%;
+}
+@media screen and (min-width: 1200px) {
+  .gallery {
+    width: 1440px;
+    height: 1265px;
+
+    margin: auto;
+    padding: 88px 0px 0px;
+  }
+  .why-text {
+    font-family: Mochiy Pop P One;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    padding: 40px 0;
+  }
+  .why-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 1100px;
+    margin: auto;
+  }
+  .why-item {
+    font-family: Ubuntu;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    padding: 16px 0px;
+    width: 540px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gallery__list {
+    width: auto;
+    padding-top: 40px;
+    padding-bottom: 44px;
+
+    margin: auto;
+  }
+  .gallery__item {
+    width: 334px;
+    height: 594px;
+
+    overflow: hidden;
+    position: relative;
+    margin: 0 18px;
+  }
+
+  .gallery__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+.features {
+  width: 375px;
+
+  margin: auto;
+  padding: 60px 41px;
+  background: radial-gradient(
+    85.79% 85.79% at 50% 50%,
+    #2b8bed 0%,
+    #0c5eb4 100%
+  );
+}
+
+.features-list {
+  padding-top: 40px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.features-item {
+  background: linear-gradient(
+    359.77deg,
+    #bfa7ff 4.77%,
+    #c4d7ff 46.55%,
+    #8bdbfe 92.99%
+  );
+  border: 4px solid rgba(255, 255, 255, 0.5);
+  width: 292px;
+  height: 280px;
+  padding: 36px 16px;
+
+  border-radius: 40px;
+}
+.features-img {
+  margin: auto;
+}
+.features-text-bold {
+  font-family: Mochiy Pop P One;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(0, 68, 139, 1);
+  padding: 24px 0 20px;
+}
+.features-text {
+  color: rgba(0, 68, 139, 1);
+  font-family: Ubuntu;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .features {
+    width: 1440px;
+    padding: 88px 94px;
+  }
+
+  .features-list {
+    padding-top: 60px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+  }
+}
+.footer {
+  background: rgba(0, 36, 107, 1);
+
+  padding: 40px 0px;
+}
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+
+  gap: 4px;
+}
+.footer-text {
+  font-family: Mochiy Pop P One;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer-copyright {
+  font-family: Mochiy Pop P One;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    padding: 40px 0px;
+  }
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 120px;
+  }
+
+  .footer-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: end;
+
+    gap: 4px;
+  }
+  .footer-text {
+    font-family: Mochiy Pop P One;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+
+  .footer-copyright {
+    font-family: Mochiy Pop P One;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+}
+.policy-terms-container {
+  flex-direction: column;
+  align-items: start;
+  padding: 136px 20px 40px;
+  color: rgba(41, 42, 43, 1);
+}
+.policy-terms-title {
+  font-family: Mochiy Pop P One;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  text-transform: uppercase;
+}
+
+.policy-terms-text {
+  font-family: Ubuntu;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  padding-top: 20px;
+}
+.policy-terms-texts {
+  font-family: Ubuntu;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  padding-top: 8px;
+}
+.policy-terms-text-one {
+  font-family: Ubuntu;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  padding-top: 20px;
+}
+
+.terms-list {
+  list-style-type: disc;
+
+  padding: 20px 0 20px 25px;
+  font-family: Ubuntu;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.terms-lists {
+  list-style-type: disc;
+
+  padding-left: 25px;
+  font-family: Ubuntu;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.email-link {
+  color: inherit;
+  text-decoration: none;
+}
+.email-link-color {
+  color: inherit;
+  text-decoration: none;
+}
+@media screen and (min-width: 1200px) {
+  .policy-terms-container {
+    padding: 156px 88px 60px;
+  }
+  .policy-terms-title {
+    font-family: Mochiy Pop P One;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+
+  .policy-terms-text {
+    font-family: Ubuntu;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    padding-top: 40px;
+  }
+  .policy-terms-texts {
+    font-family: Ubuntu;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .policy-terms-text-one {
+    font-family: Ubuntu;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    padding-top: 30px;
+  }
+
+  .terms-list {
+    list-style-type: disc;
+
+    padding: 20px 0 20px 25px;
+    font-family: Ubuntu;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .terms-lists {
+    list-style-type: disc;
+
+    font-family: Ubuntu;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+}
